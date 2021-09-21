@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>shooting game</title>
+    <style>
+      body {
+        background: black;
+      }
+      .score {
+        position: fixed;
+        color: white;
+        margin: 1 0 0 2;
+      }
+      .startGameDiv {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 40%;
+        width: 50%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        background-image: url("./bubble2.png");
+      }
+      .startGameMainDiv {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* background-image: url("./bubble.jfif"); */
+        background-position: center;
+      }
+      #bigScore {
+        color: black;
+        font-size: 50px;
+      }
+      p {
+        font-size: 20px;
+        color: black;
+      }
+      #startGameBtn {
+        width: 60%;
+        padding: 9px;
+        border-radius: 15px;
+        background-color: rgba(27, 27, 255, 0.8);
+        font-size: 15px;
+        font: bold;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="score"><span>Score:</span><span id="score">0</span></div>
+
+    <div class="startGameMainDiv">
+      <div class="startGameDiv">
+        <h1 id="bigScore">0</h1>
+        <p>points</p>
+        <button id="startGameBtn">Start game</button>
+      </div>
+    </div>
+
+    <canvas></canvas>
+    <script src="./jquery.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+      integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
