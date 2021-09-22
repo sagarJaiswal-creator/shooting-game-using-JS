@@ -108,12 +108,14 @@ let player = new Player(x, y, 30, "blue");
 let projectiles = [];
 let enemies = [];
 let particles = [];
+let initScore = 0;
 
 function init() {
   player = new Player(x, y, 30, "blue");
   projectiles = [];
   enemies = [];
   particles = [];
+  initScore = 0;
 }
 
 function spwanEnemy() {
@@ -140,7 +142,7 @@ function spwanEnemy() {
 }
 
 let animationId;
-let initScore = 0;
+
 function animate() {
   animationId = requestAnimationFrame(animate);
   ctx.fillStyle = "rgba(0,0,0,0.1)";
