@@ -116,6 +116,7 @@ function init() {
   enemies = [];
   particles = [];
   initScore = 0;
+  score.innerHtml = 0;
 }
 
 function spwanEnemy() {
