@@ -180,6 +180,8 @@ function animate() {
     const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y);
     // end game
     if (dist - enemy.radius - player.radius < 1) {
+       var audio2 = new Audio("sounds/explode2.wav");
+      audio2.play(); //player hit sound
       cancelAnimationFrame(animationId);
       startGameMainDiv.style.display = "flex";
       bigScore.innerHTML = initScore;
@@ -190,6 +192,9 @@ function animate() {
 
       // when projectile touches enemy
       if (dist - enemy.radius - projectile.radius < 1) {
+        
+        var audio1 = new Audio("sounds/explode1.wav");
+        audio1.play(); //when bullet hit the target
         //  adding particle on collision
         for (let i = 0; i < Math.random() * enemy.radius * 2; i++) {
           particles.push(
@@ -231,6 +236,9 @@ function animate() {
 }
 
 addEventListener("click", (event) => {
+    var audio = new Audio("sounds/lazer7.mp3");
+  audio.play(); //lazer fire sound
+  
   const angle = Math.atan2(
     event.clientY - canvas.height / 2,
     event.clientX - canvas.width / 2
