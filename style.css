@@ -2,3 +2,6 @@ body {
   margin: 0;
   padding: 0;
 }
+canvas {
+  background-image: url("./graphics/Scene-1.jpg");
+}
