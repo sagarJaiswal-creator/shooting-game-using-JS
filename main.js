@@ -21,10 +21,23 @@ class Player {
   }
 
   draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    ctx.fillStyle = this.color;
-    ctx.fill();
+//     ctx.beginPath();
+//     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+//     ctx.fillStyle = this.color;
+//     ctx.fill();
+    
+    
+      var playerImage = new Image();
+    playerImage.src = "graphics/spacestation.png";
+    ctx.drawImage(
+      playerImage,
+      this.x - this.radius,
+      this.y - this.radius,
+      this.radius * 2,
+      this.radius * 2
+    );
+    
+    
   }
 }
 
@@ -63,6 +76,17 @@ class Enemy {
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
     ctx.fillStyle = this.color;
     ctx.fill();
+    
+      var enemyImage = new Image();
+    enemyImage.src = "graphics/enemy.png";
+    ctx.drawImage(
+      enemyImage,
+      this.x - this.radius,
+      this.y - this.radius,
+      this.radius * 2,
+      this.radius * 2
+    );
+    
   }
   update() {
     this.draw();
