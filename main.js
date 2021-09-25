@@ -302,7 +302,7 @@ addEventListener("click", (event) => {
     y: Math.sin(angle) * 5,
   };
   projectiles.push(
-    new Projectile(canvas.width / 2, canvas.height / 2, 5, "blue", velocity)
+    new Projectile(canvas.width / 2, canvas.height / 2, 5, "white", velocity)
   );
 });
 startGameBtn.addEventListener("click", function (event) {
